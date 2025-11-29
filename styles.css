@@ -1,0 +1,220 @@
+/**************************************************************************************************************/
+/*Este es el archivo para los estilos del proyecto final
+Aquí se entregan los puntos 2 y 3 de los entregables. 
+Debes completar cada una de las secciones indicadas a continuación siguiendo las instrucciones dadas.
+*/
+/**************************************************************************************************************/
+
+/* 1) FUENTES
+- Elige 2 fuentes: una para PÁRRAFOS y otra para TÍTULOS.
+- Recomendación: simple/legible para párrafos; más llamativa para títulos.
+- Si usas Google Fonts, enlázala las fuentes en el <head> de tu HTML en la sección indicada y
+usa aquí exactamente los mismos nombres de familia.
+*/
+:root {
+    /*Aquí va la fuente principal para los PÁRRAFOS y demás textos.  
+    En vez de "Inter", debe colocar el nombre de la fuente elegida*/
+    --font-body: Helvetica, Arial, sans-serif;
+
+    /* Aquí va la fuente de TÍTULOS. 
+    En vez de "Roboto", debe colocar el nombre de la fuente elegida */
+    --font-heading: "Libre Caslon Text", serif;
+}
+
+/**************************************************************************************************************/
+
+/* 2) PALETA DE COLORES
+- Define tu primario, secundario y fondo.
+- Puedes usar HEX (#RRGGBB) o RGB (rgb(r,g,b)).
+- Añadimos también color de texto para buen contraste.
+*/
+:root {
+    --color-primary: #ad8661;
+    /* ← PRIMARIO */
+    --color-secondary: #cf9a69;
+    /* ← SECUNDARIO  */
+    --color-bg: #eae5db;
+    /* ← FONDO */
+    --color-text: #3f3b36;
+    /* ← TEXTO (ajusta si tu fondo es oscuro) */
+}
+
+/**************************************************************************************************************/
+
+/* 3) RESETEO BÁSICO Y TIPOGRAFÍA GLOBAL */
+/*Los siguientes estilos se dejan tal y como están.*/
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/* Agrega estilos al body*/
+
+body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+/* Títulos usan la fuente de encabezados */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+    margin: 0 0 0.5em;
+}
+
+
+/**************************************************************************************************************/
+/* -- HOME -- */
+
+.hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    /* Recorte */
+    background: #000;
+}
+
+/* Imagen del header*/
+.hero img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Para no deformar */
+    object-position: center 40%;
+    /* mueve el recorte */
+
+}
+
+/* capa oscura para la imagen del header */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+/* texto encima */
+.text {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    color: white;
+    font-size: larger;
+}
+
+
+.main {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* Todo el menu, incluidas las tarjetas */
+.menu-section {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+    color: #454546;
+    font-size: 25px;
+}
+
+/* Columna derecha baje */
+.menu-section .columna {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Linea del centro */
+.menu-section .separator {
+    width: 5px;
+    height: 100%;
+    background-color: #6d644c;
+    margin: 10px;
+}
+
+.menu-section .menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* Separadores horizontales*/
+.menu-section .menu-item .separator {
+    width: 100%;
+    height: 5px;
+    background-color: #6d644c;
+    margin: 10px 0;
+}
+
+/* Imagenes */
+.menu-section .menu-item img {
+    height: 200px;
+    align-items: center;
+}
+
+/* Columnas */
+.menu-section .columna:last-child {
+    justify-content: flex-end;
+}
+
+.menu-section .columna:last-child .menu-item {
+    align-items: flex-start;
+}
+
+/* Circulos de los numeros */
+.menu-section .menu-item .circle {
+    background-color: var(--color-primary);
+    border-radius: 90%;
+    padding: 5px;
+    margin-bottom: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+}
+
+/* para quitar subrayado y color azul en los links del menú */
+.menu-section a {
+    text-decoration: none;
+    color: inherit;
+    /* para quitar el color azul de los links */
+}
+
+
+.menu-img {
+
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Footer */
+footer {
+    background: var(--color-primary);
+    color: white;
+    text-align: center;
+}
+
+footer a img {
+    width: 35px;
+    height: 35px;
+    margin: 0 10px;
+}

@@ -1,0 +1,361 @@
+/*************************************************************************************************************/
+/*ESTE ES EL ARCHIVO DE ESTILOS PARA LAS PAGINAS DE SOBRE MI, HOBBIES, INFLUENCIAS Y CONTACTO. NADA MAS. 
+*/
+/**************************************************************************************************************/
+
+/* 1) FUENTES
+- Elige 2 fuentes: una para PÁRRAFOS y otra para TÍTULOS.
+- Recomendación: simple/legible para párrafos; más llamativa para títulos.
+- Si usas Google Fonts, enlázala las fuentes en el <head> de tu HTML en la sección indicada y
+usa aquí exactamente los mismos nombres de familia.
+*/
+:root {
+    /*Aquí va la fuente principal para los PÁRRAFOS y demás textos.  
+    En vez de "Inter", debe colocar el nombre de la fuente elegida*/
+    --font-body: Helvetica, Arial, sans-serif;
+
+    /* Aquí va la fuente de TÍTULOS. 
+    En vez de "Roboto", debe colocar el nombre de la fuente elegida */
+    --font-heading: "Libre Caslon Text", serif;
+}
+
+/**************************************************************************************************************/
+
+/* 2) PALETA DE COLORES
+- Define tu primario, secundario y fondo.
+- Puedes usar HEX (#RRGGBB) o RGB (rgb(r,g,b)).
+- Añadimos también color de texto para buen contraste.
+*/
+:root {
+    --color-primary: #ad8661;
+    /* ← PRIMARIO */
+    --color-secondary: #cf9a69;
+    /* ← SECUNDARIO  */
+    --color-bg: #eae5db;
+    /* ← FONDO */
+    --color-text: #3f3b36;
+    /* ← TEXTO (ajusta si tu fondo es oscuro) */
+}
+
+/*************************************************************************************************************/
+
+/* 3) RESETEO BÁSICO Y TIPOGRAFÍA GLOBAL */
+/*Los siguientes estilos se dejan tal y como están.*/
+
+
+
+html,
+body {
+    height: 100%;
+}
+
+/* Agrega estilos al body*/
+
+body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+/* Títulos usan la fuente de encabezados */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+    margin: 0 0 0.5em;
+}
+
+header {
+    text-align: center;
+    background-color: var(--color-primary);
+    color: white;
+    font-family: var(--font-heading);
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-size: 30px;
+    justify-content: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    outline: none;
+    color: inherit;
+    color: rgb(255, 255, 255);
+}
+
+nav ul li a:focus,
+nav ul li a:active {
+    outline: none;
+    border: none;
+}
+
+/*************************************************************************************************************/
+
+/* PAGINA DE "SOBRE MI" */
+
+.sobre-mi {
+    display: grid;
+    grid-template-columns: 270px 1fr;
+    gap: 40px;
+    align-items: start;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 40px;
+}
+
+/* columna fotos */
+.sm-fotos {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+.sm-fotos img {
+    width: 250px;
+    height: 320px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 18px;
+    display: block;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* columna texto */
+.sb-texto h1 {
+    font-size: 100px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    font-family: var(--font-heading);
+    color: #6d644c;
+    font-size: 70px;
+}
+
+.sb-texto p {
+    font-size: 22px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+    max-width: 520px;
+    font-family: var(--font-body);
+}
+
+.sb-texto {
+    max-width: 600px;
+}
+
+/*************************************************************************************************************/
+
+/*Hobbies*/
+
+.hb-main {
+    text-align: center;
+    padding: 30px;
+}
+
+.hb-main h1 {
+    color: #6d644c;
+    font-family: var(--font-heading);
+    font-size: 70px;
+}
+
+.hb-main h2 {
+    color: #6d644c;
+}
+
+.hb-main .hb-separador {
+    width: 600px;
+    height: 3px;
+    background-color: #6d644c;
+    margin: 10px auto 40px;
+    border-radius: 5px;
+}
+
+.hb-main p {
+    font-family: var(--font-body);
+    max-width: 600px;
+    /* esto es para el ancho de cada párrafo */
+    margin: 0 auto 25px;
+    text-align: justify;
+}
+
+.hb-main img {
+    width: 250px;
+    /* ajusta según te guste */
+    height: auto;
+    /* mantiene proporción */
+    display: block;
+    margin: 20px auto 40px;
+    /* centradas y separadas del texto */
+}
+
+/*************************************************************************************************************/
+
+/*Influencias*/
+
+.if-main {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.if-title {
+    font-size: 64px;
+    margin-bottom: 40px;
+}
+
+/* Para contener las dos columnas */
+.if-main .if-layout {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 40px;
+    position: relative;
+    text-align: left;
+    /* el texto dentro se alinea a la izquierda */
+}
+
+.if-main h1 {
+    color: #6d644c;
+    font-family: var(--font-heading);
+
+}
+
+/* divisor*/
+.if-main .if-layout::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #726646;
+}
+
+/* columnas*/
+.if-main .if-col {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.if-col-left .if-block {
+    margin-left: auto;
+}
+
+.if-main .if-block h2 {
+    font-size: 24px;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #6d644c;
+}
+
+.if-main .if-block p {
+    font-size: 16px;
+    max-width: 260px;
+    line-height: 1.7;
+}
+
+
+.if-main .if-block img {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+
+/*************************************************************************************************************/
+
+/*Contacto*/
+
+.ct-main {
+    text-align: center;
+    padding: 60px;
+}
+
+.ct-main h1 {
+    color: #6d644c;
+    font-family: var(--font-heading);
+}
+
+.ct-main h2 {
+    color: #6d644c;
+    font-family: var(--font-body);
+}
+
+/*Tabla*/
+.ct-table {
+    max-width: 900px;
+    margin: 0 auto;
+    border-top: 1px solid #b7aa86;
+    border-bottom: 1px solid #b7aa86;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Fila*/
+.ct-row {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid #b7aa86;
+}
+
+.ct-label {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+}
+
+.ct-texto p {
+    margin: 0;
+    font-size: 18px;
+    font-style: var(--font-body);
+}
+
+.ct-icono {
+    border-left: 1px solid #b7aa86;
+    text-align: center;
+    padding-left: 30px;
+}
+
+.ct-icono img {
+    width: 60px;
+    height: auto;
+    display: inline-block;
+}
+
+
+/*************************************************************************************************************/
+
+footer {
+    background: var(--color-primary);
+    color: white;
+    text-align: center;
+}
+
+footer a img {
+    width: 35px;
+    height: 35px;
+    margin: 0 10px;
+}
