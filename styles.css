@@ -168,9 +168,7 @@ h6 {
     justify-content: flex-end;
 }
 
-.menu-section .columna:last-child .menu-item {
-    align-items: flex-start;
-}
+
 
 /* Circulos de los numeros */
 .menu-section .menu-item .circle {
