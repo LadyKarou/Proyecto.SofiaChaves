@@ -219,12 +219,11 @@ nav ul li a:active {
 
 /* Para contener las dos columnas */
 .if-main .if-layout {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
     max-width: 1000px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 60px;
-    row-gap: 40px;
     position: relative;
     text-align: left;
     /* el texto dentro se alinea a la izquierda */
@@ -236,15 +235,10 @@ nav ul li a:active {
 
 }
 
-/* divisor*/
-.if-main .if-layout::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background-color: #726646;
+.if-main .separator {
+    width: 3px;
+    height: 1605px;
+    background-color: #6d644c;
 }
 
 /* columnas*/
@@ -320,11 +314,9 @@ nav ul li a:active {
 }
 
 .ct-label {
-    display: block;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 0.08em;
-    margin-bottom: 6px;
 }
 
 .ct-texto p {
